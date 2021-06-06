@@ -42,7 +42,7 @@ while True:
         if busted:
             circle = False
             balls+=1
-
+    img = cv2.flip(img, 1)
     sec = time.time() - start
     cv2.putText(img, str(int(sec)) + ' seconds.', (10, 20), cv2.FONT_HERSHEY_PLAIN, 2, (0, 0, 0), 0)
     cv2.putText(img, 'Balls: ' + str(int(balls)), (10, 70), cv2.FONT_HERSHEY_PLAIN, 2, (0, 0, 0), 0)
